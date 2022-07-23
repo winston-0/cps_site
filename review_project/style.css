@@ -1,5 +1,5 @@
 @font-face {
-    font-family: TT Lakes;
+    font-family: 'TT Lakes';
     src: url(fonts/TTLakes-Medium.woff);
 }
 @font-face {
@@ -11,17 +11,20 @@
 body {
     margin: 0;
     font-family: 'TT Lakes';
+    background-color: #F8F8F8;
+    ;
 }
 * {
     box-sizing: border-box;
 }
+
 
 /* HEADER */
 
 .header {
     width: 100%;
     border-bottom: 1px solid  #D9FFF5;
-    
+    background-color: white;
 }
 .container {
     width: 100%;
@@ -30,7 +33,7 @@ body {
 .header__container {
     gap: 16px;
     align-items: center;
-    padding: 24px 16px;
+    padding: 1.125rem 1rem;
 }
 .divider {
     border: 1px solid #EAEAEA;
@@ -50,7 +53,7 @@ body {
 .option-button {
     border-radius: 50%;
     border: none;
-    width: 44px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +71,7 @@ body {
 
 /* MAIN */
 .main-header__container {
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
     padding-left: 0;
 }
 .highlight {
@@ -80,18 +83,43 @@ body {
 }
 .main-header__title {
     font-size: 28px;
-    margin: 0 12px;
+    margin: 0 0.75rem;
 }
 .main-header__button-wrapper {
   margin-left: auto;
   gap: 32px;
 }
-.button-block {
-    display: flex;
-    align-items: center;
+.main-header__button {
     gap: 8px;
-    font-size: 16px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.main-header__button-img {
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.main-header__button-img--repair-logo {
+    background-image: url('icons/repair.svg');
+}
+.main-header__button-img--checkstatus-logo {
+    background-image: url('icons/checkstatus.svg');
+}
+.main-header__button-text {
+display: inline-block;
+color: #1B1C21;
+font-size: 16px;
+font-family: 'TT Lakes';
+font-weight: bold;
+}
+
 .invisible--max-width--1120px {
     display: none;
 }
@@ -102,9 +130,8 @@ body {
 }
 
 .main-menu__container {
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
     padding-top: 0;
-    height: fit-content;
 }
 .main-menu__list {
     display: flex;
@@ -112,14 +139,19 @@ body {
     overflow: scroll;
     margin: 0;
 }
+.link {
+    color: inherit;
+    text-decoration: none;
+}
 .list__item {
     list-style: none;
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 8px 22px;
+    padding: 8px 16px;
     color: #7E7E82;
     flex-shrink: 0;
+    font-size: 16px;
 }
 
 .list__item--focused {
@@ -152,14 +184,16 @@ body {
    
 }
 .block-about__text-wrapper p:nth-child(2) {
-  margin-top: 25px;
+  margin-top: 20px;
+}
+.block-about__text-wrapper p:first-child {
+    margin-top: 0;;
 }
 .block-about__image {
-    max-width: 550px;
-    max-height: 307px;
+    
 }
 .read-more-button {
-    margin-top: 16px;
+    margin-top: 12px;
     background-color: transparent;
     border: none;
     font-size: 16px;
@@ -175,41 +209,64 @@ body {
     display: inline-block;
     padding: 8px 12px;
 }
-@media (min-width: 1024px) {
-    .invisible--max-width--1120px {
-       display: flex
-    }
-}
+
 @media (min-width: 768px) {
+    :root {
+        font-size: 24px;
+    }
+    .header__container {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
     .block-about__container {
         flex-direction: row;
         gap: 48px;
-        padding-right: 24px;
-        padding-left: 24px;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
     .block-about__text-cont {
         width: 50%;
         padding-right: 0;
         padding-left: 0;
-        height: fit-content;
-    }
-    .main-menu__container {
-       padding-left: 24px;
-       padding-right: 24px;
     }
     .block-about__image {
         width: 50%;
-   
-        min-height: 208px;
+        border-radius: 6px;
     }
     .block-about__text-wrapper {
-        height: 175px;
+        height: 162px;
         line-height: 20px;
     }
 }
-@media (min-width: 550px) {
-    .block-about__image {
-        align-self: center;
-    
+
+@media (min-width: 1120px) {
+    :root {
+        font-size: 32px;
+    }
+    .invisible--max-width--1120px {
+        display: flex;
+    }
+    .invisible--max-width--1120px {
+        display: flex
+    }
+    .header {
+        display: none;
+    }
+    .main-header__container {
+        padding-bottom: 8px;
+    }
+    .main-menu__list {
+        flex-wrap: wrap;
+    }
+    .main-menu__container {
+        padding-bottom: 10px;
+    }
+    .list__item {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .block-about__text-cont {
+        margin-top: 7px;
     }
 }
+

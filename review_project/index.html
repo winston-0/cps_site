@@ -10,7 +10,7 @@
 <body>
   <header class="header">
     <div class="container header__container">
-        <button class="option-button">
+        <button type="button" class="option-button">
           <img class="option-button__image" src="icons/icon1.svg" alt="menu button">
         </button>
         <div class="divider invisible"></div>
@@ -19,22 +19,22 @@
         </a>
         
         <div class="buttons-wrapper invisible">
-          <button class="option-button">
+          <button type="button" class="option-button">
             <img class="option-button__image" alt="Звонок" src="icons/call.svg">
           </button>
-          <button class="option-button">
+          <button type="button" class="option-button">
             <img class="option-button__image" alt="Чат" src="icons/chat.svg">
           </button>
-          <button class="option-button">
+          <button type="button" class="option-button">
             <img class="option-button__image" alt="Профиль" src="icons/profile.svg">
           </button>
         </div>
         <div class="divider"></div>
         <div class="buttons-wrapper ">
-          <button class="option-button">
+          <button type="button" class="option-button">
             <img class="option-button__image" alt="Оставить заявку" src="icons/repair.svg">
           </button>
-          <button class="option-button">
+          <button type="button" class="option-button">
             <img class="option-button__image" alt="Проверка статуса" src="icons/checkstatus.svg">
           </button>
         </div>
@@ -46,36 +46,32 @@
         <div class="highlight"></div>
         <h1 class="main-header__title">Услуги и сервисы</h1>
         <div class="buttons-wrapper main-header__button-wrapper invisible--max-width--1120px">
-          <div class="button-block">
-              Оставить заявку
-             <button class="option-button">
-              <img class="option-button__image" alt="Оставить заявку" src="icons/repair.svg">
+             <button type="button" class="main-header__button ">
+              <p class="main-header__button-text">Оставить заявку</p>
+              <div class="main-header__button-img main-header__button-img--repair-logo"></div>
              </button>
-          </div>
-          <div class="button-block">
-             Статус ремонта
-             <button class="option-button">
-              <img class="option-button__image" alt="Проверка статуса" src="icons/checkstatus.svg">
+             <button type="button" class="main-header__button ">
+              <p class="main-header__button-text">Статус ремонта</p>
+              <div class="main-header__button-img main-header__button-img--checkstatus-logo"></div>
              </button>
-          </div>
         </div>
       </div>
     </div>
     <section class="main-menu">
       <div class="container main-menu__container">
         <ul class="list main-menu__list">
-          <li class="list__item list__item--focused">Ремонтируемые бренды</li>
-          <li class="list__item">Дополнительные услуги</li>
-          <li class="list__item">Цены на услуги</li>
-          <li class="list__item">Адреса сервисных центров</li>
-          <li class="list__item">Специальные цены</li>
-          <li class="list__item">Отзывы</li>
+          <li class="list__item list__item--focused"><a class="link" href="#">Ремонтируемые бренды</a></li>
+          <li class="list__item"><a class="link" href="#">Дополнительные услуги</a></li>
+          <li class="list__item"><a class="link" href="#">Цены на услуги</a></li>
+          <li class="list__item"><a class="link" href="#">Адреса сервисных центров</a></li>
+          <li class="list__item"><a class="link" href="#">Специальные цены</a></li>
+          <li class="list__item"><a class="link" href="#">Отзывы</a></li>
         </ul>
       </div>
     </section>
      <article class="block-about">
       <div class="container block-about__container">
-        <div class="block-about__text-cont">
+        <div class="block-about__text-cont">   
           <div class="block-about__text-wrapper">
          <p> Мы являемся авторизованным сервисным центром по ремонту техники Dell.
           Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
@@ -85,7 +81,7 @@
          <button class="read-more-button"><div class="read-more-button__logo"></div>Читать далее</button>
         </div> 
         
-          <img class="block-about__image" src="images/image1.jpg" alt="">
+          <img class="block-about__image" src="images/image1.jpg" alt="лого CPS">
         
       </div>
      </article>
