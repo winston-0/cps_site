@@ -136,7 +136,7 @@
     opacity: 1;
    transition-duration: 2s;
   }
-@media (max-height: 360px) {
+@media (max-height: 676px) {
     .side-nav-section__telephone {
     margin-bottom: 8px;
     }
