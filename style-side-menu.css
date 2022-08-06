@@ -136,3 +136,14 @@
     opacity: 1;
    transition-duration: 2s;
   }
+@media (max-height: 360px) {
+    .side-nav-section__telephone {
+    margin-bottom: 8px;
+    }
+    .side-nav__list {
+     gap: 24px;
+    }
+    .side-nav-section__wrapper {
+    padding-top: 6px;
+    }
+}_
